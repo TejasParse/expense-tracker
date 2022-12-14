@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Button, Container, Form, Modal } from "react-bootstrap";
 import ExpensesContext from "../../context/ExpensesContext/ExpensesContext";
 import "./Filters.css"
@@ -68,7 +68,7 @@ let Filters = (props) => {
     const handleShow = () => setShow(true);
 
     let addCategoryListen = () => {
-        if (inputRef.current.value.trim().length == 0) {
+        if (inputRef.current.value.trim().length === 0) {
             console.log("here");
             return;
         }
@@ -82,7 +82,7 @@ let Filters = (props) => {
     for(let tp1 in Expenses1.Expenses) {
         let newYear = "";
         for(let j=0; j<tp1.length; j++) {
-            if(tp1[j]=="-") {
+            if(tp1[j]==="-") {
                 break;
             }
             newYear += tp1[j];
@@ -126,7 +126,7 @@ let Filters = (props) => {
                                         type={"checkbox"}
                                         id={`${elmt[1]}`}
                                         label={`${elmt[0]}`}
-                                        defaultChecked={ currentMonth == elmt[1] }
+                                        defaultChecked={ currentMonth === elmt[1] }
                                         className={"m-2"}
                                         key={elmt[0]}
                                         onClick={changeShowMonths}

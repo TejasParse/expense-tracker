@@ -19,17 +19,17 @@ let ExpensesForm = (props) => {
     console.log(creditRef.current.checked);
     console.log(debitRef.current.checked);
 
-    if(catRef.current.value == "none") {
+    if(catRef.current.value === "none") {
       return;
     }
-    if(dateRef.current.value.trim().length == 0) {
+    if(dateRef.current.value.trim().length === 0) {
       return;
     }
-    if(titleRef.current.value.trim().length == 0) {
+    if(titleRef.current.value.trim().length === 0) {
       console.log("0");
       return;
     }
-    if(expenseRef.current.value.trim().length == 0) {
+    if(expenseRef.current.value.trim().length === 0) {
       console.log("0");
       return;
     }

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import CustomNavbar from './components/CustomNavbar/CustomNavbar';
-import ExpensesProvider from './context/ExpensesContext/ExpensesProvider';
 import ExpensesContext from './context/ExpensesContext/ExpensesContext';
 import Filters from './components/Filters/Filters';
 import ExpensesMain from './components/ExpensesMain/ExpensesMain';
@@ -25,7 +24,7 @@ function App() {
 	for (let tp1 in Expenses1.Expenses) {
 		let newYear = "";
 		for (let j = 0; j < tp1.length; j++) {
-			if (tp1[j] == "-") {
+			if (tp1[j] === "-") {
 				break;
 			}
 			newYear += tp1[j];
@@ -45,6 +44,7 @@ function App() {
 	let [StateApp, changeStateApp] = useState(1);
 
 	let changeappstate = ()=>{
+		console.log(StateApp)
 		changeStateApp(prev=>{
 			return prev^1;
 		})
