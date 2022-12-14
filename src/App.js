@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import CustomNavbar from './components/CustomNavbar/CustomNavbar';
 import ExpensesProvider from './context/ExpensesContext/ExpensesProvider';
-import "./app.css"
 import ExpensesContext from './context/ExpensesContext/ExpensesContext';
 import Filters from './components/Filters/Filters';
 import ExpensesMain from './components/ExpensesMain/ExpensesMain';
